@@ -24,8 +24,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home page</title>
-  <link rel="stylesheet" href="css/loginpage-style.css">
-  <link rel="stylesheet" href="css/globle-style.css">
+  <link rel="stylesheet" href="css/loginpage.css">
+  
 </head>
 
 <body>
@@ -49,14 +49,14 @@
           <div class="input-box">
           <span class="icon"></span>
           <ion-icon name="mail-outline"></ion-icon>
-          <input name="Userid" id="Userid"  type="text"   required placeholder="required" value = <?php echo $id ?>>
+          <input name="Userid" id="Userid"  type="text"   required value = <?php echo $id ?>>
           <label>User ID</label>
           </div>
 
-          <div class="input-box">
+          <div class="input-box"> 
             <span class="icon"></span>
             <ion-icon name="lock-closed-outline"></ion-icon>
-            <input name="Password" id="Password"  type="password" required placeholder="required" value = <?php echo $pass ?> >
+            <input name="Password" id="Password"  type="password" required value = <?php echo $pass ?> >
             <label>Password</label>    
           </div>
 

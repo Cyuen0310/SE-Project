@@ -12,42 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.7" />
     <title>Home page</title>
     <link rel="stylesheet" href="../homepage.css" />
+    <link rel="stylesheet" href="../css/globle-style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="navbar">
-        <div class="welcome">
-          <h1>Welcome,</h1>
-          <h1 id="UserId"><?php echo $name; ?></h1>
-        </div>
-
-        <nav>
-          <ul>
-            <li><a href="homepage.php">HOME</a></li>
-            <li><a href="../index.php">LOGOUT</a></li>
-          </ul>
-        </nav>
-        
-      </div>
+      <?php include_once('C:\hkmu\web workspace\final\Project\navbar.php') ?>
       <div class="row">
-        <div class="datetime">
-          <div class="date">
-            <span id="month">Month</span>
-            <span id="daynum">00</span>
-            <span id="year">Year</span>
-            <br />
-            <span id="dayname">Day</span>
-          </div>
 
-          <div class="time">
-            <span id="hour">00</span>
-            <a>:</a>
-            <span id="minutes">00</span>
-            <a>:</a>
-            <span id="seconds">00</span>
-            <span id="period">AM</span>
-          </div>
-        </div>
 
         <div id="personalData" class="content-section">
           <!-- Personal Data content here -->
@@ -82,7 +53,7 @@
         <div id="searchCourses" class="content-section">
           <!-- Course information here -->
           <?php if ($Userid === 'admin'): ?>
-              <a href="../admin/searchCourse.php">Course information</a>
+              <a href="../Student/searchCourse.php">Course information</a>
           <?php else: ?>
               <a href="searchCourse.php">Course information</a>
           <?php endif; ?>

@@ -6,7 +6,7 @@
     session_start();
     include "../db_conn.php";
     $Userid = $_SESSION['Userid'];
-    $CurrentSem = "2024 Spring Term";
+    $CurrentSem = "2023/24 Sem 1";
 
     if (isset($_GET['course_id'])) {
         $courseId = $_GET['course_id'];

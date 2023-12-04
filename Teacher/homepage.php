@@ -11,23 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.7" />
     <title>Home page</title>
     <link rel="stylesheet" href="../homepage.css" />
+    <link rel="stylesheet" href="../css/globle-style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="navbar">
-        <div class="welcome">
-          <h1>Welcome,</h1>
-          <h1 id="UserId"><?php echo $Userid; ?></h1>
-        </div>
-
-        <nav>
-          <ul>
-            <li><a href="homepage.php">HOME</a></li>
-            <li><a href="../index.php">LOGOUT</a></li>
-          </ul>
-        </nav>
-
-      </div>
+      <?php include_once('C:\hkmu\web workspace\final\Project\navbar.php') ?>
       <div class="row">
         <div class="datetime">
           <div class="date">

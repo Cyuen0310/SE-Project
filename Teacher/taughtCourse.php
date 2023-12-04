@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="../css/globle-style.css" />
+    <link rel="stylesheet" href="../css/searchCourse-style.css" />
     <style>
         table {
             border-collapse: collapse;
@@ -16,12 +18,16 @@
     </style>
 </head>
 <body>
+<div class="container">
+      
 <?php 
+    session_start();
+    include_once('C:\hkmu\web workspace\final\Project\navbar.php');
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    session_start();
+    
     include "../db_conn.php";
     $Userid =  $_SESSION['Userid'];
     

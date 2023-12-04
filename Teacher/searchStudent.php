@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>View Student Information</title>
+    <link rel="stylesheet" href="../css/globle-style.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,19 +59,14 @@
 </head>
 <body>
     <div class="container">
-        <a href="../Teacher/homepage.php" class="back-button">Go Back</a>
-        <div class="search-form">
-            <form action="" method="post">
-                <input type="text" name="search_query" placeholder="Enter Student Name or ID">
-                <input type="submit" name="search" value="Search">
-            </form>
-        </div>
         <?php 
+            session_start();
+            include_once('C:\hkmu\web workspace\final\Project\navbar.php');
             ini_set('display_errors', 1);
             error_reporting(E_ALL);
 
             include "../db_conn.php";
-            session_start();
+            
 
             if (isset($_POST['search'])) {
                 $searchQuery = mysqli_real_escape_string($conn, $_POST['search_query']);
@@ -103,6 +99,13 @@
                 }
             }
         ?>
+        <a href="../Teacher/homepage.php" class="back-button">Go Back</a>
+        <div class="search-form">
+            <form action="" method="post">
+                <input type="text" name="search_query" placeholder="Enter Student Name or ID">
+                <input type="submit" name="search" value="Search">
+            </form>
+        </div>
     </div>
 </body>
 </html>

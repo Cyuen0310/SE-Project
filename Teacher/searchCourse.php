@@ -28,6 +28,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Information</title>
+    <link rel="stylesheet" href="../css/globle-style.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -83,6 +84,7 @@
 </head>
 <body>
     <div class="container">
+            <?php include_once('C:\hkmu\web workspace\final\Project\navbar.php') ?>
         <h2>Search Course Information</h2>
         <form action="" method="post">
             <input type="text" name="course_code" placeholder="Enter Course Code" required>

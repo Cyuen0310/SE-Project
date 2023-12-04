@@ -63,72 +63,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f6;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .info-container {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-        .info-container > div {
-            margin-bottom: 10px;
-        }
-        .info-container label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .info-container span {
-            padding: 8px;
-            border: 1px solid #ccc;
-            background-color: #f5f5f5;
-            display: block;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        input[type="text"], input[type="email"] {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0 20px 0;
-            display: block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/globle-style.css" />
+    <link rel="stylesheet" href="../css/infopage-style.css" />
+
 </head>
 <body>
+<div class="container">
+<?php include_once('C:\hkmu\web workspace\final\Project\navbar.php') ?>
     <div class="info-container">
+
         <div>
             <label for="name">Name:</label>
             <span><?php echo htmlspecialchars($Name, ENT_QUOTES, 'UTF-8') ?></span>
@@ -170,5 +113,6 @@
             </div>
         </div>
     </form>
+</div>
 </body>
 </html>

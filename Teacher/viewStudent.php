@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>User Information</title>
+    <link rel="stylesheet" href="../css/globle-style.css" />
     <style>
         body {
             font-family: Arial, sans-serif;

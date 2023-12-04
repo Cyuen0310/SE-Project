@@ -1,5 +1,5 @@
 <?php
-    $db_server = "0.0.0.0";
+    $db_server = "127.0.0.1";
     $db_user = "root";
     $db_pass = "";
     $db_name = "ARS";

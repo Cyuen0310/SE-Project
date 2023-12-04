@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="../css/globle-style.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,12 +57,16 @@
     </style>
 </head>
 <body>
+<div class="container">
+
 <?php 
+    session_start();
+    include_once('C:\hkmu\web workspace\final\Project\navbar.php');
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    session_start();
+    
     include "../db_conn.php";
     $Userid =  $_SESSION['Userid'];
 
@@ -92,6 +97,7 @@
 ?>
 <div style="margin-top: 20px;">
     <a href="homepage.php" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Back to Homepage</a>
+</div>
 </div>
 </body>
 </html>
