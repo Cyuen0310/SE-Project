@@ -1,0 +1,19 @@
+{
+  "name": "se-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyuen0310/SE-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyuen0310/SE-Project/issues"
+  },
+  "homepage": "https://github.com/Cyuen0310/SE-Project#readme"
+}

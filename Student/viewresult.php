@@ -37,7 +37,7 @@
 </head>
 <body>
     <div class="container">
-    <?php include_once('C:\hkmu\web workspace\final\Project\navbar.php') ?>
+    <?php include_once('../navbar.php')?>
         <?php 
             $totalAccumulatedCredits = 0;
             $totalAccumulatedPoints = 0;

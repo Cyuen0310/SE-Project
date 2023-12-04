@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <?php include_once('C:\hkmu\web workspace\final\Project\navbar.php') ?>
+      <?php include_once('../navbar.php') ?>
       <div class="row">
 
 
@@ -62,9 +62,6 @@
 
       </div>
     </div>
-
-
-    <script src="../realtime.js"></script>
   </body>
 </html>
 

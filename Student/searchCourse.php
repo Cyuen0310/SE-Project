@@ -33,7 +33,7 @@
 </head>
 <body>
     <div class="container">
-    <?php include_once('C:\hkmu\web workspace\final\Project\navbar.php') ?>
+    <?php include_once('../navbar.php') ?>
         <h2>Search Course Information</h2>
         <form action="" method="post">
             <input type="text" name="course_code" placeholder="Enter Course Code" required>

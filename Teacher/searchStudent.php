@@ -61,7 +61,8 @@
     <div class="container">
         <?php 
             session_start();
-            include_once('C:\hkmu\web workspace\final\Project\navbar.php');
+            include_once('../navbar.php');
+
             ini_set('display_errors', 1);
             error_reporting(E_ALL);
 

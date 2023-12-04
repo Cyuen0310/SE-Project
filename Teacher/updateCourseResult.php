@@ -5,6 +5,8 @@
 
     session_start();
     include "../db_conn.php";
+    include_once('../navbar.php');
+
     $Userid = $_SESSION['Userid'];
     $CurrentSem = "2023/24 Sem 1";
 

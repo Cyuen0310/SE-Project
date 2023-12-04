@@ -3,6 +3,7 @@
 <head>
 
     <title>Course Details</title>
+    <link rel="stylesheet" href="../css/globle-style.css" />
     <style>
         table {
             border-collapse: collapse;
@@ -23,7 +24,10 @@
     error_reporting(E_ALL);
 
     session_start();
+    include_once('../navbar.php');
+
     include "../db_conn.php";
+
 
     if (isset($_GET['course_id'])) {
         $courseId = mysqli_real_escape_string($conn, $_GET['course_id']);

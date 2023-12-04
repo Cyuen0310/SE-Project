@@ -15,35 +15,21 @@
   </head>
   <body>
     <div class="container">
-      <?php include_once('C:\hkmu\web workspace\final\Project\navbar.php') ?>
-      <div class="row">
-        <div class="datetime">
-          <div class="date">
-            <span id="month">Month</span>
-            <span id="daynum">00</span>
-            <span id="year">Year</span>
-            <br />
-            <span id="dayname">Day</span>
-          </div>
 
-          <div class="time">
-            <span id="hour">00</span>
-            <a>:</a>
-            <span id="minutes">00</span>
-            <a>:</a>
-            <span id="seconds">00</span>
-            <span id="period">AM</span>
-          </div>
-        </div>
+      <?php include_once('../navbar.php') ?>
 
 
+      <div class = "row">
 
           <!-- Taught Courses content here -->   
             <?php if ($Userid === 'admin'): ?>
+
             <?php else: ?>
+
             <div id="taughtCourses" class="content-section">
               <a href="taughtCourse.php">Courses</a> 
             </div>
+
             <?php endif; ?>
       
 
@@ -68,7 +54,7 @@
           <a href="searchCourse.php">Search course information</a>    
         </div>
 
-      </div>
+        </div>
     </div>
 
 
