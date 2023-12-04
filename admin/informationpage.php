@@ -2,59 +2,9 @@
 <html>
 <head>
     <title>Edit Student Information</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f6;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:hover {background-color: #f5f5f5;}
-        input[type="text"], input[type="email"], input[type="date"] {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        .back-button {
-            text-decoration: none;
-            padding: 10px 15px;
-            background-color: #ddd;
-            color: black;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/globle-style.css" />
+    
+
 </head>
 <body>
     <div class="container">
@@ -71,6 +21,7 @@
         include "../db_conn.php"; // Ensure the path is correct
 
         session_start();
+        include "../navbar.php";
 
         if (isset($_POST['search'])) {
             $searchId = mysqli_real_escape_string($conn, $_POST['search_id']);
@@ -87,7 +38,7 @@
                 echo 'Birth: <input type="date" name="birth" value="' . htmlspecialchars($row['birth']) . '"><br>';
                 echo 'Admission Date: <input type="date" name="admission_date" value="' . htmlspecialchars($row['Admission_Date']) . '"><br>';
                 echo 'Address: <input type="text" name="address" value="' . htmlspecialchars($row['address']) . '"><br>';
-                echo 'Personal Phone No.: <input type="text" name="phone" value="' . htmlspecialchars($row['phoneNum']) . '"><br>';
+                echo 'Personal Phone No.: <input type="text" name="phone"  pattern="\d{8}" title="Please enter exactly 8 digits" maxlength="8" minlength="8" value="' . htmlspecialchars($row['phoneNum']) . '"><br>';
                 echo 'Personal Email: <input type="email" name="email" value="' . htmlspecialchars($row['email']) . '"><br>';
                 echo '<input type="submit" name="update" value="Update">';
                 echo '</form>';

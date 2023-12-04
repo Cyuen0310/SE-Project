@@ -4,7 +4,6 @@
 <html>
 <head>
     <title>Course Enrollment Information</title>
-    <link rel="stylesheet" href="../css/cEnroll-style.css" />
     <link rel="stylesheet" href="../css/globle-style.css" />
 </head>
 <body>

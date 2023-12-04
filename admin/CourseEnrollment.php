@@ -2,56 +2,9 @@
 <html>
 <head>
     <title>Edit Student Information</title>
-    <style>
-        /* Your existing CSS styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f6;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:hover {background-color: #f5f5f5;}
-        input[type="text"], input[type="email"], input[type="date"], input[type="submit"] {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        .back-button {
-            text-decoration: none;
-            padding: 10px 15px;
-            background-color: #ddd;
-            color: black;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/globle-style.css" />
+
+
 </head>
 <body>
     <div class="container">

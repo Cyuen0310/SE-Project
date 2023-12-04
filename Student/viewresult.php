@@ -33,7 +33,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Results</title>
     <link rel="stylesheet" href="../css/globle-style.css" />
-    <link rel="stylesheet" href="../css/viewresult.css" /> 
 </head>
 <body>
     <div class="container">
