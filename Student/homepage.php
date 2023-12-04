@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.7" />
     <title>Home page</title>
-    <link rel="stylesheet" href="/css/homepage.css" />
+    <link rel="stylesheet" href="../css/homepage.css" />
   </head>
   <body>
     <div class="container">
