@@ -28,7 +28,7 @@
                 $searchQuery = mysqli_real_escape_string($conn, $_POST['search_query']);
 
                 // Adjusted SQL to search by name or ID
-                $sql = "SELECT * FROM Student WHERE userid = '$searchQuery' OR name LIKE '%$searchQuery%'";
+                $sql = "SELECT * FROM Student WHERE (userid = '$searchQuery' OR name LIKE '%$searchQuery%') AND userid != 'admin'";
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {

@@ -70,7 +70,7 @@
         ?>
 
 
-            <a href="../Student/homepage.php" class="button">Cancel</a>
+        <a href="../Student/homepage.php" class="button">Cancel</a>
 
  
 
