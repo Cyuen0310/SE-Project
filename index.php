@@ -64,7 +64,7 @@
                 <label><input type="checkbox" name="rememberMe" <?php echo isset($_COOKIE['Userid']) ? 'checked' : ''; ?>>Remember Me</label>
                 <a href="#">Forgot password?</a>
             </div>
-            <input type="radio" name="userType" value="Staff" <?php echo $Usertype == 'Staff' ? 'checked' : ''; ?>>
+            <input type="radio" name="userType" value="Teacher" <?php echo $Usertype == 'Teacher' ? 'checked' : ''; ?>>
             <label for="staff">Staff</label>
 
             <input type="radio" name="userType" value="Student" <?php echo $Usertype == 'Student' ? 'checked' : ''; ?>>

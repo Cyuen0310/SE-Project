@@ -4,18 +4,6 @@
 
     <title>Course Details</title>
     <link rel="stylesheet" href="../css/globle-style.css" />
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:hover {background-color: #f5f5f5;}
-    </style>
 </head>
 <body>
 <?php 
@@ -30,7 +18,7 @@
 
 
     if (isset($_GET['course_id'])) {
-        $courseId = mysqli_real_escape_string($conn, $_GET['course_id']);
+        $courseId = trim(mysqli_real_escape_string($conn, $_GET['course_id']));
 
         $sql = "SELECT s.name, s.userid, e.grade, e.Semester FROM Student s, EnrolledCourse e WHERE e.course_id = '$courseId' AND e.student_id = s.userid ORDER BY e.Semester";
         $result = mysqli_query($conn, $sql);
@@ -52,7 +40,7 @@
                 }
                 // Print student information
                 echo "<tr>";
-                echo "<td>" . htmlspecialchars($row['name']) . "</td>";
+                echo "<td>" . strtoupper(htmlspecialchars($row['name'])) . "</td>";
                 echo "<td><a href='viewStudent.php?userid=" . htmlspecialchars($row['userid']) . "&course_id=" . htmlspecialchars($courseId) .  "'>" . htmlspecialchars($row['userid']) . "</a></td>";
                 echo "<td>" . (isset($row['grade']) ? htmlspecialchars($row['grade']) : 'N/A') . "</td>";
                 echo "</tr>";

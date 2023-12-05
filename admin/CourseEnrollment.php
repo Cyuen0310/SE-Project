@@ -4,22 +4,25 @@
     <title>Edit Student Information</title>
     <link rel="stylesheet" href="../css/globle-style.css" />
 
-
 </head>
 <body>
+    
     <div class="container">
-        <a href="../Student/homepage.php" class="back-button">Go Back</a>
+        <?php 
+            session_start();
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL);
+
+            include "../db_conn.php";
+            include "../navbar.php";
+
+        ?>
         <form action="" method="post">
             <input type="text" name="search_id" placeholder="Enter Student ID">
             <input type="submit" name="search" value="Search">
         </form>
 
         <?php 
-        ini_set('display_errors', 1);
-        error_reporting(E_ALL);
-
-        include "../db_conn.php";
-        session_start();
 
         // Handling course drop request
         if (isset($_POST['drop_course'])) {
@@ -60,7 +63,7 @@
                     echo "<td>" . $row["credit"] . "</td>";
                     echo "<td>" . $row["grade"] . "</td>";
                     echo "<td>";
-                    echo "<form action='' method='post'>";
+                    echo "<form action='' method='post' onsubmit='return confirmDrop()'>";
                     echo "<input type='hidden' name='drop_course_id' value='" . htmlspecialchars($row["course_id"]) . "'>";
                     echo "<input type='hidden' name='student_id' value='" . htmlspecialchars($searchId) . "'>";
                     echo "<input type='submit' name='drop_course' value='Drop'>";
@@ -74,6 +77,13 @@
             }
         }
         ?>
+        <script type="text/javascript">
+            function confirmDrop() {
+                return confirm('Are you sure you want to drop this course?');
+            }
+        </script>
+
+        <a href="../Student/homepage.php" class="button">Back to Homepage</a>
     </div>
 </body>
 </html>

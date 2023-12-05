@@ -57,7 +57,7 @@
             }
         ?>
         <div style="margin-top: 20px;">
-            <a href="homepage.php" class="back-button">Back to Homepage</a>
+            <a href="homepage.php" class="button">Back to Homepage</a>
         </div>
     </div>
 </body>

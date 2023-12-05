@@ -2,8 +2,9 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-
+    session_start();
     include "../db_conn.php";
+    include "../navbar.php";
 
     $message = isset($_GET['message']) ? $_GET['message'] : '';
     $editCourseDetails = null;
@@ -112,7 +113,7 @@
         <?php endif; ?>
 
         <div style="margin-top: 20px;">
-            <a href="../Teacher/homepage.php" class="back-button">Back to Homepage</a>
+            <a href="../Teacher/homepage.php" class="button">Back to Homepage</a>
         </div>
     </div>
 </body>

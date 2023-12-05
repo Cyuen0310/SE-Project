@@ -12,7 +12,7 @@ session_start();
     $Usertype = $_POST["userType"];
 
 
-    if($Usertype == "Staff")
+    if($Usertype == "Teacher")
     {
       $sql = "SELECT * FROM Staff WHERE userid='$Userid' ";
 

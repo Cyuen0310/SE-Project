@@ -20,24 +20,20 @@
 
 
       <div class = "row">
-
+        <div id="taughtCourses" class="content-section">
           <!-- Taught Courses content here -->   
             <?php if ($Userid === 'admin'): ?>
-
+              <a href="../admin/EditCourseResult.php">Edit Courses Result (All Semester)</a> 
             <?php else: ?>
-
-            <div id="taughtCourses" class="content-section">
-              <a href="taughtCourse.php">Courses</a> 
-            </div>
-
+              <a href="taughtCourse.php">Edit Courses Result (Current Semester)</a> 
             <?php endif; ?>
-      
+         </div>
 
 
 
         <div id="DepartmentCourses" class="content-section">
             <?php if ($Userid === 'admin'): ?>
-              <a href="../admin/departmentCourse.php">View department Courses</a>
+              <a href="../admin/departmentCourse.php">Edit department Courses</a>
             <?php else: ?>
               <a href="departmentCourse.php">View department Courses</a>
             <?php endif; ?>

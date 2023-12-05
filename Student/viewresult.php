@@ -77,12 +77,12 @@
             </table>
             <?php
             echo "<p>GPA: " . round($semesterGPA, 2) . "</p>";
-            echo "<p>CGPA: " . round($cumulativeCGPA, 2) . "</p>";
+            echo "<p>GPA(Cumulative): " . round($cumulativeCGPA, 2) . "</p>";
             echo "<hr>";
         }
         ?>
         <div style="margin-top: 20px;">
-            <a href="homepage.php" class="back-button">Back to Homepage</a>
+            <a href="homepage.php" class="button">Back to Homepage</a>
         </div>
     </div>
 </body>

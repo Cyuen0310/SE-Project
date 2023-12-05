@@ -3,19 +3,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="../css/globle-style.css" />
-    <link rel="stylesheet" href="../css/searchCourse-style.css" />
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:hover {background-color: #f5f5f5;}
-    </style>
+
 </head>
 <body>
 <div class="container">
@@ -47,7 +35,7 @@
             echo "<td>" . htmlspecialchars($row['course_type']) . "</td>";
             
             // Edit button
-            echo "<td><a href='updateCourseResult.php?course_id=" . $row['course_id'] . "'>Update/view result</a></td>";
+            echo "<td><a href='updateCourseResult.php?course_id=" . $row['course_id'] . "' class = button>Update/view result</a></td>";
             echo "</tr>";
         }
 

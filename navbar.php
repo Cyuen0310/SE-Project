@@ -1,6 +1,7 @@
 <?php
 
-    $name = $_SESSION['Name'];
+    $Userid = $_SESSION['Userid'];
+    $Usertype = $_SESSION['UserType']
 ?>
 
 <!DOCTYPE html>
@@ -17,12 +18,12 @@
   <div class="navbar">
     <div class="welcome">
             
-            <h1 id="UserId">Welcome!<?php echo strtoupper($name); ?></h1>
+            <h1 id="UserId">Welcome! <?php echo $Userid ?></h1>
           </div>
 
           <nav>
             <ul>
-              <li><a href="homepage.php">HOME<iconify-icon icon="ion:home"></iconify-icon></a></li>
+              <li><a href="../<?php echo $Usertype?>/homepage.php">HOME<iconify-icon icon="ion:home"></iconify-icon></a></li>
               <li><a href="../index.php">LOGOUT<iconify-icon icon="clarity:logout-solid"></iconify-icon></a></li>
             </ul>
             <div class="datetime">
