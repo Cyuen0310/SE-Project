@@ -51,7 +51,7 @@
 
                     echo "</table>";
                 } else {
-                    echo "No student found with the provided information.";
+                    echo "No student found with the provided information. <br>" ;
                 }
             }
         ?>

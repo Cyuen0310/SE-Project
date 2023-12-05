@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../css/globle-style.css" />
 </head>
 <body>
+<div class="container">
 <?php 
     session_start();
     ini_set('display_errors', 1);
@@ -53,5 +54,6 @@
     }
 ?>
 <a href="viewCourse.php?course_id=<?php echo htmlspecialchars($courseId); ?>" class="button">Back to list</a>
+</div>
 </body>
 </html>

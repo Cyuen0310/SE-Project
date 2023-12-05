@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/globle-style.css" />
 </head>
 <body>
+<div class="container">
 <?php 
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -56,6 +57,7 @@
 ?>
 <div style="margin-top: 20px;">
     <a href="departmentCourse.php" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Back</a>
+</div>
 </div>
 </body>
 </html>
