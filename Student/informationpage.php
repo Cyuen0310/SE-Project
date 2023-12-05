@@ -109,15 +109,19 @@
                 <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" value="<?php echo htmlspecialchars($Email, ENT_QUOTES, 'UTF-8') ?>">
             </div>
             <div>
-                <button name="save" type="submit">Save</button>
+                <button name="save" type="submit" class ="button" >Save</button>
             </div>
         </div>
     </form>
-            <script type="text/javascript">
+        <script type="text/javascript">
             function confirmedit() {
                 return confirm('Are you sure you want to save the changes?');
             }
         </script>
+        <div style="margin-top: 20px;">
+            <a href="homepage.php" class="button">cancel</a>
+        </div>
+    
 </div>
 </body>
 </html>
