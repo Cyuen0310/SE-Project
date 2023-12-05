@@ -8,7 +8,7 @@
     include "../utils.php"; // Ensure you have the function calculateGradePoint defined in this file
 
     $userId = $_SESSION['Userid'];
-    $currentSemester = "2023/24 Sem 2";
+    $currentSemester = "2023/24 Sem 1";
 
     $sql = "SELECT e.Semester, c.course_id, c.course_name, c.credit, e.grade 
             FROM EnrolledCourse e 

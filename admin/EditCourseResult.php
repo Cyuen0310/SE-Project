@@ -15,7 +15,7 @@
             include "../navbar.php";
 
             // Function to update grade
-            function updateGrade($conn, $studentId, $courseId, $newGrade) {
+            function update($conn, $studentId, $courseId, $newGrade) {
                 $updateSql = "UPDATE EnrolledCourse SET grade = ? WHERE student_id = ? AND course_id = ?";
                 $stmt = mysqli_prepare($conn, $updateSql);
                 mysqli_stmt_bind_param($stmt, "sss", $newGrade, $studentId, $courseId);
@@ -28,7 +28,7 @@
                 $courseId = mysqli_real_escape_string($conn, $_POST['course_id']);
                 $newGrade = mysqli_real_escape_string($conn, $_POST['grade']);
 
-                updateGrade($conn, $studentId, $courseId, $newGrade);
+                update($conn, $studentId, $courseId, $newGrade);
                 header("Location: ../Teacher/homepage.php?=Grade updated successfully");
             }
 
@@ -60,6 +60,7 @@
         <?php 
         if (isset($_POST['search']) && mysqli_num_rows($result) > 0) {
     
+            echo "<h3>Course code: " . htmlspecialchars($courseId) . "</h3>";
 
             while ($row = mysqli_fetch_assoc($result)) {
                 if ($row['Semester'] != $currentSemester) {
