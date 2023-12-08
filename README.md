@@ -37,7 +37,7 @@ Set up a MySQL database server to host the application's database. You can insta
    ?>
 ```
 
-3. Host the database: Create a MySQL database on your server that will be used by the web application. Import the provided SQL file (ARS_2.sql) into your database to set up the required tables and data.
+3. Host the database: Create a MySQL database on your server that will be used by the web application. Import the provided SQL file (ARS.sql) into your database to set up the required tables and data.
 
 4. Start a web server: Set up a local web server on your machine to run the web application. You can use tools like XAMPP, WAMP, or MAMP, which provide a pre-configured environment for PHP development. Alternatively, you can use the built-in PHP development server by running the following command from the project's root directory:
    php -S localhost:8000
