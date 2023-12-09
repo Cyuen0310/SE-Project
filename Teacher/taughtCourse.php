@@ -45,7 +45,7 @@
     }
 ?>
 <div style="margin-top: 20px;">
-    <a href="homepage.php" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Back to Homepage</a>
+    <a href="homepage.php" class = "button">Back to Homepage</a>
 </div>
 </body>
 </html>

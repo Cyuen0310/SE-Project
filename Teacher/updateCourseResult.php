@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="container">
+<div class="container">
     <?php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -28,7 +28,7 @@
         if (mysqli_num_rows($result) > 0) {
             echo "<h3>Course: $courseId </h3>";
             echo "<h3>Semester: $CurrentSem </h3>";
-            echo "<form action=' update.php' method='post'>";
+            echo "<form action='update.php' method='post'>";
             echo "<input type='hidden' name='course_id' value='" . $courseId . "'>";
             echo "<table border='1' style='width: 100%; margin-top: 20px;'>";
             echo "<tr><th>Student ID</th><th>Student Name</th><th>Grade</th></tr>";
@@ -41,7 +41,7 @@
                 echo "<select name='grades[" . $row['userid'] . "]'>";
                 echo " <option value='' disabled selected>--Select--</option>";
                 // Grade options
-                $grades = ['A', 'A-', 'B+', 'B', 'B-' , 'C+','C','F'];
+                $grades = ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'F'];
                 foreach ($grades as $grade) {
                     echo "<option value='" . $grade . "'" . ($row['grade'] == $grade ? ' selected' : '') . ">" . $grade . "</option>";
                 }
@@ -51,7 +51,7 @@
             }
 
             echo "</table>";
-            echo "<button type='submit' style='margin-top: 10px;'>Update Grades</button>";
+            echo "<button type='submit' name='submit' style='margin-top: 10px;'>Update Grades</button>";
             echo "</form>";
         } else {
             echo "No students found.";
@@ -60,16 +60,19 @@
         echo "Course ID not provided.";
     }
 
-
-    if (isset($_POST['submit'])){
-        echo"update successful";
-
+    if (isset($_POST['submit'])) {
+        // Check if grades were submitted
+        if (isset($_POST['grades'])) {
+            // Handle grade updates here
+            echo "Grades updated successfully.";
+        } else {
+            echo "No grades were updated.";
+        }
     }
-?>
-<div style="margin-top: 20px;">
-    <a href="homepage.php" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Back to Homepage</a>
+    ?>
+    <div style="margin-top: 20px;">
+        <a href="homepage.php" class = "button">Back to Homepage</a>
+    </div>
 </div>
-</div>
-    
 </body>
 </html>

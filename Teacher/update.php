@@ -28,7 +28,8 @@
             mysqli_commit($conn);
 
             // Optionally, redirect back to a specific page
-            header("Location: homepage.php?message=" . urlencode("Grades updated successfully"));
+            header("Location: homepage.php");
+            exit();
 
 
         } catch (Exception $e) {
@@ -37,6 +38,9 @@
             echo "An error occurred: " . $e->getMessage();
         }
     } else {
-        echo "Form not submitted or course ID not provided.";
+        header("Location: homepage.php");
+        exit();
+
+
     }
 ?>

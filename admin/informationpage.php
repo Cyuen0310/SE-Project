@@ -29,7 +29,6 @@
                 $result = mysqli_query($conn, $sql);
 
                 if ($row = mysqli_fetch_assoc($result)) {
-                    // Edit Form Appears After Successful Search
                     echo "<h2>Student ID: " . htmlspecialchars($row['userid']) . "</h2>";
                     echo '<form action="" method="post">';
                     echo '<input type="hidden" name="userid" value="' . htmlspecialchars($row['userid']) . '">';

@@ -56,8 +56,7 @@
           <div class="input-box"> 
             <span class="icon"></span>
             <ion-icon name="lock-closed-outline"></ion-icon>
-            <input name="Password" id="Password"  type="password"  pattern="(?=.*\d)(?=.*[A-Z]).{8,}" 
-       title="Password must contain at least one uppercase character, one integer, and be at least 8 characters long." required value = <?php echo $pass ?> >
+            <input name="Password" id="Password"  type="password"  required value = <?php echo $pass ?> >
             <label>Password</label>    
           </div>
 
