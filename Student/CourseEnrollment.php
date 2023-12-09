@@ -27,19 +27,15 @@
             $currentSemester = null;
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    // Check if the semester has changed
                     if ($row['Semester'] != $currentSemester) {
-                        // Close previous table, if any
                         if ($currentSemester != null) {
                             echo "</table><br>";
                         }
                         $currentSemester = $row['Semester'];
-                        // Start a new table or a new section for this semester
                         echo "<h3>Semester: $currentSemester</h3>";
                         echo "<table border='1'>";
                         echo "<tr><th>Course code</th><th>Course Title</th><th>Category</th><th>Credit</th><th>Lecturer</th><th>Lecturer email</th></tr>";
                     }
-                    // Print course information
                     echo "<tr>";
                     echo "<td>" . $row["course_id"] . "</td>";
                     echo "<td>" . $row["course_name"] . "</td>";
@@ -50,7 +46,7 @@
 
                     echo "</tr>";
                 }
-                // Close the last table
+
                 echo "</table>";
             } else {
                 echo "0 results";

@@ -6,7 +6,6 @@
     session_start();
     include "../db_conn.php";
 
-    // Check if the form has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['grades']) && isset($_POST['course_id'])) {
         $courseId = mysqli_real_escape_string($conn, $_POST['course_id']);
         $grades = $_POST['grades'];

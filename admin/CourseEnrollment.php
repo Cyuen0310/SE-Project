@@ -37,7 +37,6 @@
             }
         }
 
-        // Handling search
         if (isset($_POST['search'])) {
             $searchId = mysqli_real_escape_string($conn, $_POST['search_id']);
             $sql = "SELECT c.course_name, c.course_id, c.course_type, c.credit, e.grade, e.Semester FROM EnrolledCourse e, Course c WHERE e.student_id = '$searchId' AND e.course_id = c.course_id ORDER BY e.Semester";

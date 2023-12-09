@@ -29,17 +29,14 @@
             while ($row = mysqli_fetch_assoc($result)) {
                 // Check if the semester has changed
                 if ($row['Semester'] != $currentSemester) {
-                    // Close previous table, if any
                     if ($currentSemester !== null) {
                         echo "</table>";
                     }
                     $currentSemester = $row['Semester'];
-                    // Start a new table or a new section for this semester
                     echo "<h3>Semester: " . htmlspecialchars($currentSemester) . "</h3>";
                     echo "<table>";
                     echo "<tr><th>Student Name</th><th>Student ID</th><th>Result</th></tr>";
                 }
-                // Print student information
                 echo "<tr>";
                 echo "<td>" . strtoupper(htmlspecialchars($row['name'])) . "</td>";
                 echo "<td><a href='viewStudent.php?userid=" . htmlspecialchars($row['userid']) . "&course_id=" . htmlspecialchars($courseId) .  "'>" . htmlspecialchars($row['userid']) . "</a></td>";

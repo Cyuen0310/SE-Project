@@ -51,7 +51,6 @@
             }
         </script>
 
-        <!-- Search Form -->
         <form action="" method="post">
             <input type="text" name="course_id" placeholder="Enter Course ID">
             <input type="submit" name="search" value="Search">
