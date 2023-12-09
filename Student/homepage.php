@@ -1,8 +1,14 @@
 <?php
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    include "../utils.php";
+
     session_start();
     $Userid = $_SESSION['Userid'];
     $UserType = $_SESSION['UserType'];
     $name = $_SESSION['Name'];
+    $currentURL = $_SERVER['REQUEST_URI'];
+    checkAccess($currentURL, $UserType);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +26,6 @@
 
 
         <div id="personalData" class="content-section">
-          <!-- Personal Data content here -->
           <?php if ($Userid === 'admin'): ?>
               <a href="../admin/informationpage.php">Personal information</a>
           <?php else: ?>
@@ -30,7 +35,6 @@
         </div>
 
         <div id="enrolledCourses" class="content-section">
-          <!-- Enrolled Courses content here -->
           <?php if ($Userid === 'admin'): ?>
               <a href="../admin/CourseEnrollment.php">Enrolment Statement</a>
           <?php else: ?>
@@ -39,7 +43,6 @@
         </div>
 
           <div id="academic result" class="content-section">
-          <!-- Enrolled Courses content here -->
           <?php if ($Userid === 'admin'): ?>
               <a href="../admin/CourseEnrollment.php">Academic Result</a>
           <?php else: ?>
@@ -50,9 +53,8 @@
 
 
         <div id="searchCourses" class="content-section">
-          <!-- Course information here -->
           <?php if ($Userid === 'admin'): ?>
-              <a href="../Student/searchCourse.php">Course information</a>
+              <a href="searchCourse.php">Course information</a>
           <?php else: ?>
               <a href="searchCourse.php">Course information</a>
           <?php endif; ?>

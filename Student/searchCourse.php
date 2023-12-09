@@ -5,6 +5,17 @@
 
     session_start();
     include "../db_conn.php";
+    include "../utils.php";
+
+    $Userid = $_SESSION['Userid'];
+    $UserType = $_SESSION['UserType'];
+    echo "Userid: " . $Userid;
+    echo "UserType: " . $UserType;
+    $name = $_SESSION['Name'];
+    $currentURL = $_SERVER['REQUEST_URI'];
+
+    checkAccess($currentURL, $UserType);
+
 
     $searchResult = null;
 

@@ -1,4 +1,8 @@
+
+
 <?php 
+
+
     function validate($data)
      {
       $data = trim($data);
@@ -23,6 +27,25 @@ function calculateGradePoint($grade) {
     // If the grade is not found, return 0
     return isset($gradePoints[$grade]) ? $gradePoints[$grade] : 0;
 }
+
+
+function checkAccess($currentPage, $UserType) {
+    $allowedRoles = [
+        '/SE-Project/Student/homepage.php' => ['Student'],
+        '/SE-Project/Teacher/homepage.php' => ['Teacher'],
+        '/SE-Project/Student/searchCourse.php' => ['Student'],
+        '/SE-Project/Teacher/searchCourse.php' => ['Teacher'],
+
+    
+    ];
+
+    if (!in_array($UserType, $allowedRoles[$currentPage])) {
+        // Redirect to an error page or homepage
+        header("Location: ../index.php?no_access");
+        exit();
+    }
+}
+
 
 
 ?>

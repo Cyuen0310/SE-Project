@@ -4,7 +4,13 @@
     error_reporting(E_ALL);
 
     session_start();
+    
     include "../db_conn.php";
+    include "../utils.php";
+    $currentURL = $_SERVER['REQUEST_URI'];
+    $UserType = $_SESSION['UserType'];
+
+    checkAccess($currentURL, $UserType);
 
     $searchResult = null;
 

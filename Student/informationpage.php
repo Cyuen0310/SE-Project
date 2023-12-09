@@ -15,17 +15,19 @@
     $phoneNum = $_SESSION['Personal phone no.'];
     $Nationality = $_SESSION['Nationality'];
     $admissionYear = $_SESSION['Admission Year'];
+    
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($_POST['save'])) 
         {
+            if (!empty($_POST['address']) && !empty($_POST['phoneNum']) && !empty($_POST['email'])) {
             $updateAddress = validate($_POST['address']);
             $updatePhone = validate($_POST['phoneNum']);
             $updateEmail = validateEmail($_POST['email']);
             
             if ($updateEmail == false) 
             {
-                    header("Location:homepage.php?error=Error updating information: ");
+                    header("Location:homepage.php");
                     exit();
             } 
             else 
@@ -36,16 +38,18 @@
                     $_SESSION['Address'] = $updateAddress;
                     $_SESSION['Personal phone no.'] = $updatePhone;
                     $_SESSION['Email'] = $updateEmail;
-                    header("Location:homepage.php?success=Information updated successfully");
+                    header("Location:homepage.php");
                     exit();
                 } 
                 else 
                 {
-                    header("Location:homepage.php?error=Error updating information: " . mysqli_error($conn));
+                    header("Location:homepage.php");
                     exit();
                 }
             }
         }
+
+    }
     }
     function validateEmail($email){
         $email = trim($email);
@@ -100,14 +104,17 @@
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" value="<?php echo htmlspecialchars($Address, ENT_QUOTES, 'UTF-8') ?>">
             </div>
+
             <div>
                 <label for="phoneNum">Personal Phone No.:</label>
                 <input type="text" id="phoneNum" name="phoneNum" pattern="\d{8}" title="Please enter exactly 8 digits" maxlength="8" minlength="8" value="<?php echo htmlspecialchars($phoneNum, ENT_QUOTES, 'UTF-8') ?>">
             </div>
+
             <div>
                 <label for="email">Personal Email:</label>
-                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" value="<?php echo htmlspecialchars($Email, ENT_QUOTES, 'UTF-8') ?>">
+                <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address" value="<?php echo htmlspecialchars($Email, ENT_QUOTES, 'UTF-8') ?>">
             </div>
+
             <div>
                 <button name="save" type="submit" class ="button" >Save</button>
             </div>

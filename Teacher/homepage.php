@@ -1,7 +1,17 @@
 <?php
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    include "../utils.php";
+
     session_start();
     $Userid = $_SESSION['Userid'];
     $UserType = $_SESSION['UserType'];
+    $name = $_SESSION['Name'];
+
+
+   $currentURL = $_SERVER['REQUEST_URI'];
+
+  checkAccess($currentURL, $UserType);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +31,6 @@
 
       <div class = "row">
         <div id="taughtCourses" class="content-section">
-          <!-- Taught Courses content here -->   
             <?php if ($Userid === 'admin'): ?>
               <a href="../admin/EditCourseResult.php">Edit Courses Result (All Semester)</a> 
             <?php else: ?>
@@ -40,13 +49,11 @@
         </div>
 
         <div id="SearchStudent" class="content-section">
-          <!-- Taught Courses content here -->
           <a href="searchStudent.php">Search student information</a>    
         </div>
 
 
         <div id="SearchCourse" class="content-section">
-          <!-- Taught Courses content here -->
           <a href="searchCourse.php">Search course information</a>    
         </div>
 
